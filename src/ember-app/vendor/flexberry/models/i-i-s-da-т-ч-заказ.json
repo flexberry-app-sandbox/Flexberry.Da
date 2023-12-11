@@ -1,0 +1,187 @@
+﻿{
+  "name": "IISDaТЧЗаказ",
+  "modelName": "i-i-s-da-т-ч-заказ",
+  "className": "ТЧЗаказ",
+  "nameSpace": "IIS.Da",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаНДС",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этоУслуга",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "единицыИзмер",
+      "relatedTo": "i-i-s-da-единицы-измер",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "номенклатура",
+      "relatedTo": "i-i-s-da-номенклатура",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказПост",
+      "relatedTo": "i-i-s-da-заказ-пост",
+      "inverse": "заказ"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧЗаказE",
+      "modelName": "i-i-s-da-т-ч-заказ",
+      "attrs": [
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "этоУслуга",
+          "caption": "Это услуга",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "суммаНДС",
+          "caption": "Сумма НДС",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Номенклатура",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Номенклатура.Контрагенты",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "контрагент",
+                  "caption": "Контрагенты",
+                  "hidden": false,
+                  "index": 7
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "контрагенты",
+              "relatedTo": "i-i-s-da-контрагенты",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номенклатура",
+              "caption": "Номенклатура",
+              "hidden": false,
+              "index": 0
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номенклатура",
+          "name": "номенклатура",
+          "relatedTo": "i-i-s-da-номенклатура",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ЕдиницыИзмер",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "единицаИзмер",
+              "caption": "ЕдиницаИзмер",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ЕдиницаИзмер",
+          "name": "единицыИзмер",
+          "relatedTo": "i-i-s-da-единицы-измер",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

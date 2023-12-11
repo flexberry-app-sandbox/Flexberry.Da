@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-da-план-закупок-e",
+  "editForm": "i-i-s-da-план-закупок-e",
+  "external": false,
+  "caption": "План закупок",
+  "name": "IISDaПланЗакупокL",
+  "className": "ПланЗакупокL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-da-план-закупок",
+      "modelProjection": "ПланЗакупокL"
+    }
+  ]
+}

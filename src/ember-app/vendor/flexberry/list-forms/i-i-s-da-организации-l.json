@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-da-организации-e",
+  "editForm": "i-i-s-da-организации-e",
+  "external": false,
+  "caption": "Организации",
+  "name": "IISDaОрганизацииL",
+  "className": "ОрганизацииL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-da-организации",
+      "modelProjection": "ОрганизацииL"
+    }
+  ]
+}

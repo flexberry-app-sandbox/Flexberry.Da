@@ -1,0 +1,123 @@
+<h3 class="ui header">{{t "forms.i-i-s-da-заказ-пост-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-da-заказ-пост-e.датаНачала-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаНачала
+      class=(if (v-get validationModel "датаНачала" "isInvalid") "error")
+      data-test-i-i-s-da-заказ-пост-e-датаНачала=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНачала" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.организации.организация
+      class=(if (v-get validationModel.организации "организация" "isInvalid") "error")
+      label=(t "forms.i-i-s-da-заказ-пост-e.организации.организация-caption")
+      data-test-i-i-s-da-заказ-пост-e-организации-организация=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.организации "организация" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-da-заказ-пост-e.датаОкончания-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОкончания
+      class=(if (v-get validationModel "датаОкончания" "isInvalid") "error")
+      data-test-i-i-s-da-заказ-пост-e-датаОкончания=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОкончания" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.склады.склад
+      class=(if (v-get validationModel.склады "склад" "isInvalid") "error")
+      label=(t "forms.i-i-s-da-заказ-пост-e.склады.склад-caption")
+      data-test-i-i-s-da-заказ-пост-e-склады-склад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.склады "склад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.контрагенты.контрагент
+      class=(if (v-get validationModel.контрагенты "контрагент" "isInvalid") "error")
+      label=(t "forms.i-i-s-da-заказ-пост-e.контрагенты.контрагент-caption")
+      data-test-i-i-s-da-заказ-пост-e-контрагенты-контрагент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.контрагенты "контрагент" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.суммаДокумента
+      class=(if (v-get validationModel "суммаДокумента" "isInvalid") "error")
+      label=(t "forms.i-i-s-da-заказ-пост-e.суммаДокумента-caption")
+      data-test-i-i-s-da-заказ-пост-e-суммаДокумента=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "суммаДокумента" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-da-заказ-пост-e-состояниеОплаты="true">
+    <label>{{t "forms.i-i-s-da-заказ-пост-e.состояниеОплаты-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-da-сост-оплаты")
+      value=model.состояниеОплаты
+      class=(if (v-get validationModel "состояниеОплаты" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состояниеОплаты" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-da-заказ-пост-e-состОтгрузки="true">
+    <label>{{t "forms.i-i-s-da-заказ-пост-e.состОтгрузки-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-da-сост-поставок")
+      value=model.состОтгрузки
+      class=(if (v-get validationModel "состОтгрузки" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состОтгрузки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-da-заказ-пост-e.заказ-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="заказGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.заказ
+      content=model.заказ
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "заказ" "isInvalid") "error")
+      data-test-i-i-s-da-заказ-пост-e-заказ=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заказ" "message")}}
+  </div>
+</form>

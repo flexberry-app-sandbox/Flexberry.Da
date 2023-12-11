@@ -1,0 +1,126 @@
+﻿{
+  "name": "IISDaПланЗакупок",
+  "modelName": "i-i-s-da-план-закупок",
+  "className": "ПланЗакупок",
+  "nameSpace": "IIS.Da",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организации",
+      "relatedTo": "i-i-s-da-организации",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склады",
+      "relatedTo": "i-i-s-da-склады",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "план",
+      "relatedTo": "i-i-s-da-план",
+      "inverse": "планЗакупок"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПланЗакупокE",
+      "modelName": "i-i-s-da-план-закупок",
+      "attrs": [
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "организация",
+              "caption": "Организация",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Организация",
+          "name": "организации",
+          "relatedTo": "i-i-s-da-организации",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Склады",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "склад",
+              "caption": "Склад",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Склад",
+          "name": "склады",
+          "relatedTo": "i-i-s-da-склады",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ПланE",
+          "caption": "План",
+          "name": "план",
+          "relatedTo": "i-i-s-da-план",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПланЗакупокL",
+      "modelName": "i-i-s-da-план-закупок",
+      "attrs": [
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

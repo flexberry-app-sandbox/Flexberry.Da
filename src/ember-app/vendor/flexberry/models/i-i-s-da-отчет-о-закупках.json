@@ -1,0 +1,30 @@
+﻿{
+  "name": "IISDaОтчетОЗакупках",
+  "modelName": "i-i-s-da-отчет-о-закупках",
+  "className": "ОтчетОЗакупках",
+  "nameSpace": "IIS.Da",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОтчетОЗакупкахE",
+      "modelName": "i-i-s-da-отчет-о-закупках",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ОтчетОЗакупкахL",
+      "modelName": "i-i-s-da-отчет-о-закупках",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

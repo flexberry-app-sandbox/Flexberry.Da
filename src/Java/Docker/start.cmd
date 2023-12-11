@@ -1,0 +1,1 @@
+docker-compose -p da-java up -d

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Заказ пост",
+  "name": "IISDaЗаказПостE",
+  "className": "ЗаказПостE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-da-заказ-пост",
+      "modelProjection": "ЗаказПостE"
+    }
+  ]
+}

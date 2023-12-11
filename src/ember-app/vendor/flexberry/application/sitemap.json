@@ -1,0 +1,71 @@
+﻿{
+  "applicationCaption": "Da",
+  "applicationTitle": "Da",
+  "items": [
+    {
+      "link": null,
+      "menuName": "da",
+      "caption": "Da",
+      "title": "Da",
+      "children": [
+        {
+          "link": "i-i-s-da-отчет-о-закупках-l",
+          "menuName": null,
+          "caption": "Отчет о закупках",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-заказ-пост-l",
+          "menuName": null,
+          "caption": "Заказ пост",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-номенклатура-l",
+          "menuName": null,
+          "caption": "Номенклатура",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-склады-l",
+          "menuName": null,
+          "caption": "Склады",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-единицы-измер-l",
+          "menuName": null,
+          "caption": "Единицы измер",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-контрагенты-l",
+          "menuName": null,
+          "caption": "Контрагенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-организации-l",
+          "menuName": null,
+          "caption": "Организации",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-da-план-закупок-l",
+          "menuName": null,
+          "caption": "План закупок",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

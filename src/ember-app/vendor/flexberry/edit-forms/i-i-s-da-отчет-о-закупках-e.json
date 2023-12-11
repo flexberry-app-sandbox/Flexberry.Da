@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Отчет о закупках",
+  "name": "IISDaОтчетОЗакупкахE",
+  "className": "ОтчетОЗакупкахE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-da-отчет-о-закупках",
+      "modelProjection": "ОтчетОЗакупкахE"
+    }
+  ]
+}
